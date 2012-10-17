@@ -1,0 +1,13 @@
+<h1> Vendor Bids </h1>
+
+<% @prices.each do |price|%>
+<h2> <%= link_to price.seq, price%> </h2>
+<p> <%= price.pnum%> </p>
+<p> <%= link_to "Edit", edit_price_path(price) %> |
+    <%= link_to "Delete", price, :confirm => "Are you sure?", :method=> :delete %>
+</p>
+<hr />
+<% end %>
+
+<p> <%= link_to "Add a New Bid", new_price_path %></p>
+

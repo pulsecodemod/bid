@@ -1,0 +1,7 @@
+<h2> Vendors </h2>
+<ul>
+  <% @orgs.each do |org| %>
+     <li><%= link_to org.org_name, org %></li>
+  <% end %>
+</ul>
+
