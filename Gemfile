@@ -38,3 +38,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug'
+gem 'composite_primary_keys', '~>5.0.9'

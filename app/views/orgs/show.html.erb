@@ -1,8 +1,10 @@
 <h2><%= @org.org_name %></h2>
-<ul id='prices'>
+<table id='prices'>
+  <th>SEQ</th><th>PART</th><th>VSPEC</th><th>PRICE</th><th>PKG</th><th>LOT</th><th>LEAD</th><th>EXP</th><th>PRODTYPE</th>
   <% @org.prices.each do |price| %>
-    <li>
-      <%= price.seq %> - <%= price.vspec %> <%= price.price  %>
-    </li>
+    <tr>
+     <td><%= price.seq %> </td><td><%= price.pnum %></td><td><%= price.vspec %></td><td> <%=  price.price %></td><td> <%=  price.pkg %></td>
+     <td><%= price.lot %> </td> <td><%= price.ldtime %> </td><td><%= price.expire %> </td><td><%= price.prodtype %> </td>
+   </tr>
   <% end %>
-</ul>
+</table>
