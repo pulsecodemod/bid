@@ -1,1 +1,8 @@
 <h2><%= @org.org_name %></h2>
+<ul id='prices'>
+  <% @org.prices.each do |price| %>
+    <li>
+      <%= price.seq %> - <%= price.vspec %> <%= price.price  %>
+    </li>
+  <% end %>
+</ul>
